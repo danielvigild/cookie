@@ -54,12 +54,14 @@ def train(lr, epochs):
             train_losses.append(loss.item())
 
     # save plot of training loss
-    fig_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/reports/figures"
+    #fig_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/reports/figures"
+    fig_path = "/reports/figures"
     plt.plot(train_losses)
     plt.savefig(fig_path + "/train_losses.png")
 
     # save model
-    model_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/cookie/models/saved_models"
+    #model_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/cookie/models/saved_models"
+    model_path = "/cookie/models/saved_models"
     torch.save(model.state_dict(), model_path + "/ffn_model_checkpoint.pt")
 
     
@@ -97,7 +99,8 @@ def evaluate(model_checkpoint):
     # print accuracy
     print(f"Accuracy: {sum(test_accuracy)/len(test_accuracy)}")
     # save plot of test accuracy
-    fig_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/reports/figures"
+    #fig_path = "/mnt/c/Users/djv/RFF/MLOps/cookie/reports/figures"
+    fig_path = "/reports/figures"    
     plt.plot(test_accuracy)
     plt.savefig(fig_path + "/test_accuracy.png")
 
