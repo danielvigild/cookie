@@ -101,8 +101,8 @@ def evaluate(model_checkpoint):
     plt.plot(test_accuracy)
     plt.savefig(fig_path + "/test_accuracy.png")
 
-cli.add_command(train) # in terminal, run: python train_model.py train --lr 1e-4 --epochs 10
-cli.add_command(evaluate) # in terminal, run: python train_model.py evaluate models/saved_models/ffn_model_checkpoint.pt
+cli.add_command(train) # in terminal, run: python3 train_model.py train --lr 1e-4 --epochs 10
+cli.add_command(evaluate) # in terminal, run: python3 train_model.py evaluate models/saved_models/ffn_model_checkpoint.pt
 
 
 if __name__ == "__main__":
