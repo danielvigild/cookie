@@ -6,9 +6,9 @@ import numpy
 
 def mnist():
     """Return train and test dataloaders for MNIST."""
-    # exchange with the corrupted mnist dataset
-    #path = "/mnt/c/Users/djv/RFF/MLOps/cookie/data/raw/"
-    path = "/data/raw/"
+    # exchange with the corrupted mnist dataset - REMEMBER TO  change them for Docker stuff
+    path = "/mnt/c/Users/djv/RFF/MLOps/cookie/data/raw/"
+    #path = "/data/raw/"
     train_images, train_labels = [], []
     for i in range(1, 6):
         train_images.append(torch.load(path + "train_images_" + str(i) + ".pt"))
@@ -39,11 +39,11 @@ def mnist():
 
 train, test = mnist()
 
-# save the training and test data to processed
-#torch.save(train, "/mnt/c/Users/djv/RFF/MLOps/cookie/data/processed/train.pt")
-#torch.save(test, "/mnt/c/Users/djv/RFF/MLOps/cookie/data/processed/test.pt")
-torch.save(train, "/data/processed/train.pt")
-torch.save(test, "/data/processed/test.pt")
+# save the training and test data to processed - REMEMBER TO  change them for Docker stuff
+torch.save(train, "/mnt/c/Users/djv/RFF/MLOps/cookie/data/processed/train.pt")
+torch.save(test, "/mnt/c/Users/djv/RFF/MLOps/cookie/data/processed/test.pt")
+#torch.save(train, "/data/processed/train.pt")
+#torch.save(test, "/data/processed/test.pt")
 
 
 pass

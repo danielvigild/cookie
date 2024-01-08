@@ -2,7 +2,7 @@ from torch import nn
 import torch.nn.functional as F
 
 
-class MyAwesomeModel(nn.Module):
+class MyNeuralNet(nn.Module):
     """My awesome model."""
 
     def __init__(self):
